@@ -21,3 +21,11 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/partials/fonts.css
+src/partials/fonts.css.map
+src/partials/global.css
+src/partials/global.css.map
+src/partials/mixins.css
+src/partials/mixins.css.map
+src/partials/variables.css
+src/partials/variables.css.map

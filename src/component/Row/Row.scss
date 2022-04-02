@@ -1,0 +1,24 @@
+.row {
+    &__posters {
+        display: flex;
+        flex-direction: row;
+        //justify-content: space-around;
+        // flex-wrap: wrap;
+    }
+
+    &__poster-card {
+        // background: linear-gradient(-45deg,
+        // rgba(0,0,0, .7),
+        // rgba(95, 195, 228, .7));
+    }
+
+    &__poster {
+        object-fit: contain;
+        //width: 20%;
+        max-height: 25.25rem;
+        margin-right: 1rem;
+        border-radius: 10px;
+        transition: transform 450ms;
+
+    }
+}
