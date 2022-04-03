@@ -1,10 +1,10 @@
 import axios from "axios";
 import {Component, useEffect, useState} from "react";
-import "../Row/Row.scss"
+import "../BannerRow/BannerRow.scss"
 
 const baseUrl ='https://image.tmdb.org/t/p/original/'
 
-function Row ({title, fetchURL}) {
+function BannerRow ({title, fetchURL}) {
     // state = {
     //     movies:[]
     // }
@@ -36,15 +36,16 @@ function Row ({title, fetchURL}) {
     , [fetchURL]);
         //console.log(movies);
         return (
-            <div className="row">
-                <div >
-                    <h2 className="row__title">{title}</h2>
+            <div className="banner-row">
+                <div className="banner-row-title--container" >
+                    <h2 className="banner-row-title">{title}</h2>
                 </div>
-                <div className="row__posters">
-                   {movies.slice(0,5).map(movie => (
-                      <div className="row__poster-card"
+                <div className="banner-row__posters">
+                   {movies.slice(0,10).map(movie => (
+                      <div className="banner-row__poster-card"
                       key={movie.id}> 
-                      <img className="row__poster" src={`${baseUrl}${movie.backdrop_path}`} alt={movie.title}/>
+                      <img className="banner-row__poster" src={`${baseUrl}${movie.backdrop_path}`} alt={movie.title}/>
+                      <p className="banner-row__poster-title">{movie?.title || movie?.name || movie?.original_name}</p>
                       </div>
                    ))}
                     
@@ -53,4 +54,4 @@ function Row ({title, fetchURL}) {
         )
     }
 
-    export default Row;
+    export default BannerRow;

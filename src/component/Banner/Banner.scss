@@ -1,0 +1,304 @@
+.banner {
+    color: white;
+    object-fit: contain;
+    height: 67.5rem;
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    justify-content: space-between ;
+    
+    &__container{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 7rem;
+        height: 11rem;
+        width: 35%;
+        text-align: start;
+        margin-top: 5rem;
+        padding-bottom: 4rem;
+    }
+
+    &__title{
+        font-size: 4rem;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4rem;
+        //line-height: 24px;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+    }
+    &__metadata {
+        font-size: 1.5rem;
+        height: auto;
+    
+    }
+    &__button {
+        position: absolute;
+        width: 144px;
+        height: 144px;
+        left: 106px;
+        top: 492px;
+        border-radius: 50%;
+        /* Play Button */
+        
+    }
+
+}
+
+
+
+/* Trailers */
+
+// position: absolute;
+// width: 185px;
+// height: 48px;
+// left: 103px;
+// top: 716px;
+
+// /* Heading/Bold/Heading 4 - 32px */
+// font-family: 'DM Sans';
+// font-style: normal;
+// font-weight: 700;
+// font-size: 32px;
+// line-height: 48px;
+// /* identical to box height, or 150% */
+// font-feature-settings: 'pnum'on,
+// 'lnum'on;
+
+// /* Text/White */
+// color: #FFFFFF;
+
+
+
+// /* 1 */
+
+// position: absolute;
+// width: 296px;
+// height: 160px;
+// left: 103px;
+// top: 796px;
+
+
+
+// /* Container */
+
+// position: absolute;
+// width: 296px;
+// height: 136px;
+// left: 103px;
+// top: 796px;
+
+// /* Primary/Dark Gray */
+// background: #1E1E1E;
+
+
+// /* 01 */
+
+// position: absolute;
+// width: 36px;
+// height: 48px;
+// left: 349px;
+// top: 908px;
+
+// /* Heading/Bold/Heading 4 - 32px */
+// font-family: 'DM Sans';
+// font-style: normal;
+// font-weight: 700;
+// font-size: 32px;
+// line-height: 48px;
+// /* identical to box height, or 150% */
+// font-feature-settings: 'pnum'on,
+// 'lnum'on;
+
+// /* Text/White */
+// color: #FFFFFF;
+
+
+
+// /* 2 */
+
+// position: absolute;
+// width: 296px;
+// height: 160px;
+// left: 415px;
+// top: 796px;
+
+
+
+// /* Container */
+
+// position: absolute;
+// width: 296px;
+// height: 136px;
+// left: 415px;
+// top: 796px;
+
+// /* Primary/Dark Gray */
+// background: #1E1E1E;
+
+
+// /* 02 */
+
+// position: absolute;
+// width: 41px;
+// height: 48px;
+// left: 656px;
+// top: 908px;
+
+// /* Heading/Bold/Heading 4 - 32px */
+// font-family: 'DM Sans';
+// font-style: normal;
+// font-weight: 700;
+// font-size: 32px;
+// line-height: 48px;
+// /* identical to box height, or 150% */
+// text-align: right;
+// font-feature-settings: 'pnum'on,
+// 'lnum'on;
+
+// /* Text/White */
+// color: #FFFFFF;
+
+
+
+// /* 3 */
+
+// position: absolute;
+// width: 296px;
+// height: 160px;
+// left: 727px;
+// top: 796px;
+
+
+
+// /* Container */
+
+// position: absolute;
+// width: 296px;
+// height: 136px;
+// left: 727px;
+// top: 796px;
+
+// /* Primary/Dark Gray */
+// background: #1E1E1E;
+
+
+// /* 03 */
+
+// position: absolute;
+// width: 46px;
+// height: 48px;
+// left: 963px;
+// top: 908px;
+
+// /* Heading/Bold/Heading 4 - 32px */
+// font-family: 'DM Sans';
+// font-style: normal;
+// font-weight: 700;
+// font-size: 32px;
+// line-height: 48px;
+// /* identical to box height, or 150% */
+// text-align: right;
+// font-feature-settings: 'pnum'on,
+// 'lnum'on;
+
+// /* Text/White */
+// color: #FFFFFF;
+
+
+
+// /* 4 */
+
+// position: absolute;
+// width: 296px;
+// height: 160px;
+// left: 1039px;
+// top: 796px;
+
+
+
+// /* Container */
+
+// position: absolute;
+// width: 296px;
+// height: 136px;
+// left: 1039px;
+// top: 796px;
+
+// /* Primary/Dark Gray */
+// background: #1E1E1E;
+
+
+// /* 04 */
+
+// position: absolute;
+// width: 50px;
+// height: 48px;
+// left: 1271px;
+// top: 908px;
+
+// /* Heading/Bold/Heading 4 - 32px */
+// font-family: 'DM Sans';
+// font-style: normal;
+// font-weight: 700;
+// font-size: 32px;
+// line-height: 48px;
+// /* identical to box height, or 150% */
+// text-align: right;
+// font-feature-settings: 'pnum'on,
+// 'lnum'on;
+
+// /* Text/White */
+// color: #FFFFFF;
+
+
+
+// /* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. */
+
+// position: absolute;
+// width: 404px;
+// height: 96px;
+// left: 806px;
+// top: 410px;
+
+// /* Body/16px Regular */
+// font-family: 'DM Sans';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 16px;
+// line-height: 32px;
+// /* or 200% */
+
+// /* Text/Disable */
+// color: #E6E6E6;
+
+
+
+// /* The Legend of Sunrise */
+
+// position: absolute;
+// width: 441px;
+// height: 192px;
+// left: 806px;
+// top: 194px;
+
+// /* Heading/Bold/Heading 1 - 72px */
+// font-family: 'DM Sans';
+// font-style: normal;
+// font-weight: 700;
+// font-size: 72px;
+// line-height: 96px;
+// /* or 133% */
+
+// /* Text/White */
+// color: #FFFFFF;

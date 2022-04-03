@@ -1,9 +1,21 @@
 .row {
+    padding-inline: 2rem;
+    &__title{
+        font-size: 3rem;
+        text-align: start;
+    }
+    
     &__posters {
         display: flex;
         flex-direction: row;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        padding: 1.25rem;
         //justify-content: space-around;
         // flex-wrap: wrap;
+        &::-webkit-scrollbar {
+          display: none;  
+        }
     }
 
     &__poster-card {
@@ -15,10 +27,13 @@
     &__poster {
         object-fit: contain;
         //width: 20%;
-        max-height: 25.25rem;
+        max-height: 20.25rem;
         margin-right: 1rem;
         border-radius: 10px;
         transition: transform 450ms;
 
+        &:hover{
+            transform: scale(1.08);
+        }
     }
 }
