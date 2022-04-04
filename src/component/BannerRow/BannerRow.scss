@@ -29,11 +29,19 @@
 
     &__poster-card {
         margin-bottom: 0rem;
+        position: relative;
         &:hover .banner-row__poster-title {
             opacity: 100%;
             visibility: visible;
             transition: opacity .8s;
             background-size: cover;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%)
+                
         }
         // background: linear-gradient(-45deg,
         // rgba(0,0,0, .7),
