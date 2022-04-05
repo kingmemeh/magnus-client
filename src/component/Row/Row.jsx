@@ -23,6 +23,7 @@ function Row ({title, fetchURL}) {
 
     const [movies, setMovies] = useState([]);
    const [clickedMovie, setClickedMovie] = useState("");
+   const [largeMovie, setLargeMovie] =useState([])
     const [showModal, setShowModal] = useState(false);
 
   const openModal = (movieID) => {
@@ -40,6 +41,7 @@ function Row ({title, fetchURL}) {
         async function fetchData() {
             const request = await axios.get(fetchURL)
                 setMovies(request.data.results);
+                setLargeMovie(request.data.results[0])
                 //console.log(request)
                 return request;
                 
@@ -58,15 +60,17 @@ function Row ({title, fetchURL}) {
                     <h2 className="row__title">{title}</h2>
                 </div>
                 <div className="row__posters" >
-                   {movies.slice(0,5).map(movie => (
+                <div div className="row__poster-card-backdrop" ><img className="row__poster-backdrop" src={`${baseUrl}${largeMovie.backdrop_path}`} alt={largeMovie.title}  /></div>
+                   {movies.slice(1,5).map((movie, first) => (
                       <div className="row__poster-card"
                       onClick={() => {openModal(movie.id)}}
                       key={movie.id}> 
-                      <img className="row__poster" src={`${baseUrl}${movie.backdrop_path}`} alt={movie.title}/>
+                      
+                      <img className="row__poster" 
+                      src={`${baseUrl}${movie.poster_path}`} alt={movie.title}/>
                       </div>
                       
                    ))}
-                
                 </div>
                  {showModal ? <Modal close={closeModal} movie={clickedMovie} /> : <div></div>}
             </div>

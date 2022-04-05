@@ -9,10 +9,11 @@ function App() {
     <div className="App">
       <NavBar/>
       <Banner fetchURL={requests.findTopRated}/>
+      <div className="index__row-container">
       <Row title="Top-Rated" fetchURL={requests.findTopRated}/>
       <Row title="Action Movies" fetchURL={requests.fetchActionMovies}/>
       <Row title="Animated Movies" fetchURL={requests.fecthAnimatedMovies}/>
-
+      </div>
     </div>
   );
 }

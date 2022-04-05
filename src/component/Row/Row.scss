@@ -11,24 +11,37 @@
         overflow-y: hidden;
         overflow-x: scroll;
         padding: 1.25rem;
+        flex-wrap: wrap;
+        align-items: center;
         //justify-content: space-around;
         // flex-wrap: wrap;
+        width: 1280px;
+        height:1256px;
         &::-webkit-scrollbar {
           display: none;  
         }
     }
 
     &__poster-card {
+        width:400px;
+        height: 560px;
+        padding: .5rem;
         // background: linear-gradient(-45deg,
         // rgba(0,0,0, .7),
         // rgba(95, 195, 228, .7));
+        &-backdrop {
+            width: 817px;
+            height: 560px;
+            padding: 1rem;
+        }
     }
 
     &__poster {
-        object-fit: contain;
-        //width: 20%;
-        max-height: 20.25rem;
-        margin-right: 1.2rem;
+        object-fit: cover;
+        width: 400px;
+        height: 560px;
+        //max-height: 45.25rem;
+        margin-right: 3.2rem;
         border-radius: 10px;
         transition: transform 450ms;
 
@@ -37,5 +50,20 @@
             filter: brightness(30%);
             transition: 300ms ease;
         }
+    &-backdrop {
+        object-fit: cover;
+        width: 817px;
+        height: 560px;
+        //max-height: 45.25rem;
+        margin-right: 1.2rem;
+        border-radius: 10px;
+        transition: transform 450ms;
+        
+        &:hover {
+            transform: scale(1.08);
+            filter: brightness(30%);
+            transition: 300ms ease;
+        }
+    }
     }
 }
