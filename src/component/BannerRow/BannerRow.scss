@@ -30,6 +30,7 @@
     &__poster-card {
         margin-bottom: 0rem;
         position: relative;
+        height: 12rem;
         &:hover .banner-row__poster-title {
             opacity: 100%;
             visibility: visible;
@@ -71,6 +72,10 @@
 
         &:hover {
             transform: scale(1.08);
+            //backdrop-filter: blur(4px);
+            filter: brightness(30%);
+            transition: 300ms ease;
+            
         }
         
 

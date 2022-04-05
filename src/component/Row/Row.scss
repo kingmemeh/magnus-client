@@ -28,13 +28,14 @@
         object-fit: contain;
         //width: 20%;
         max-height: 20.25rem;
-        margin-right: 1rem;
+        margin-right: 1.2rem;
         border-radius: 10px;
         transition: transform 450ms;
 
         &:hover{
             transform: scale(1.08);
-            
+            filter: brightness(30%);
+            transition: 300ms ease;
         }
     }
 }

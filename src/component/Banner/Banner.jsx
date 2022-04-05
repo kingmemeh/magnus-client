@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 //import requests from "../../request";
 import axios from 'axios';
-import VideoList from '../Sidebar/Sidebar'
-import Sidebar from "../Sidebar/Sidebar";
 import "./Banner.scss"
 import requests from "../../request";
 import BannerRow from "../BannerRow/BannerRow";
