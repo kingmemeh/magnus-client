@@ -3,6 +3,7 @@ const apiUrl = 'https://api.themoviedb.org/3'
 
 const requests = {
     fetchTrending:`${apiUrl}/trending/all/day?api_key=${apiKey}`,
+    fetchTrendingTV:`${apiUrl}/trending/tv/day?api_key=${apiKey}`,
     //fetchSimilar: `${apiUrl}/movie/${movie_id}/similar?api_key=${apiKey}&language=en-US&page=1`,
     findTopRated: `${apiUrl}/movie/top_rated?api_key=${apiKey}&language=en-US`,
     fecthAnimatedMovies: `${apiUrl}/discover/movie?api_key=${apiKey}&&with_genres=16`,
@@ -14,3 +15,5 @@ const requests = {
 }
 
 export default requests;
+
+//https://api.themoviedb.org/3/discover/tv?api_key=c5942fe01166300c4d9f7ade06bcd727&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0

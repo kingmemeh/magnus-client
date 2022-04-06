@@ -4,6 +4,7 @@ import requests from './request';
 import Row from './component/Row/Row';
 import Banner from './component/Banner/Banner'
 import NavBar from "./component/NavBar/NavBar";
+import TVHomeDetails from "./component/TVHomeDetails/TVHomeDetails";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       <Row title="Top-Rated" fetchURL={requests.findTopRated}/>
       <Row title="Action Movies" fetchURL={requests.fetchActionMovies}/>
       <Row title="Animated Movies" fetchURL={requests.fecthAnimatedMovies}/>
+      <TVHomeDetails title="Trending TV" fetchURL={requests.fetchTrendingTV}/>
       </div>
     </div>
   );

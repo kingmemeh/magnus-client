@@ -56,8 +56,9 @@ function Row ({title, fetchURL}) {
         //console.log(movies);
         return (
             <div className="row">
-                <div >
+                <div className="row__title-container" >
                     <h2 className="row__title">{title}</h2>
+                    <p className="row__link"> View More</p>
                 </div>
                 <div className="row__posters" >
                 <div div className="row__poster-card-backdrop" ><img className="row__poster-backdrop" src={`${baseUrl}${largeMovie.backdrop_path}`} alt={largeMovie.title}  /></div>

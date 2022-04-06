@@ -1,0 +1,118 @@
+.home-tv{
+    &__container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #3D3D3D;
+    }
+
+    &__video-container{
+        width: 77rem;
+        height: 40rem;
+        margin-bottom: 3rem;
+        position: relative;
+        object-fit: cover;
+        
+        // &:hover {
+        //     filter: brightness(40%);
+        //     transition:  300ms ease;
+        // }
+        &:hover .home-tv__video-metadata-container {
+            transition: opacity 700ms, ease;
+            opacity: 100%;
+            z-index: 100;
+            display: flex;
+        }
+
+        &:hover .home-tv__video-play--button{
+            display: none;
+
+        }
+        // &:hover .video{
+        //     filter:brightness(40%);
+        //     transition: 350ms, ease;
+        // }
+    }
+
+    &__video{
+        object-fit: cover;
+        width: inherit;
+        height: inherit;
+
+        // &:hover{
+        //     filter: brightness(40%);
+        //     transition: 150ms ease;
+        // }
+        
+
+        &-metadata-container{
+            opacity: 0;
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                top: 50%;
+                padding-inline: 3rem;
+                }
+        
+        &-title{
+                /* position: absolute; */
+                /* top: 50%; */
+                font-size: 5rem;
+                /* left: 50%; */
+                /* transform: translate(10%, -100%); */
+                /* z-index: 1; */
+                margin-block: 1rem;
+        }
+
+        &-description {
+            /* top: 30vh; */
+            font-size: 2rem;
+            /* left: 5rem; */
+            /* margin: 0; */
+            text-align: start;
+            /* width: 80%; */
+            /* z-index: 1; */
+            /* position: absolute; */
+            /* top: 50%; */
+            /* font-size: 5rem; */
+            /* left: 50%; */
+            /* transform: translate*/
+            margin-top: 1rem;
+            }
+        
+        &-button-container {
+                display: flex;
+                justify-content: space-evenly;
+                width: 20%;
+        }
+
+        &-play--button{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+        &-button--1 {
+        font-size: 2rem;
+            
+
+        }
+        &-button--2 {
+            font-size: 2rem;
+            
+        
+        }
+
+    
+
+    &__splitter {
+        height: 20rem;
+        background-color: black;
+    }
+}
+}

@@ -1,0 +1,46 @@
+.episodes {
+    width: 80vw;
+    padding-block: 3rem;
+    &__card-container {
+        display: flex;
+        justify-content: space-evenly;
+        //padding-bottom: 3rem;
+        //width: 1232px;
+    }
+}
+
+.episode{
+    &__card {
+        width: 80vw;
+        height: 176;
+        background-color: #000000;
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        border-radius: 5px;
+
+        &:hover {
+            transform: scale(1.08);
+            z-index: 1;
+            transition: 100ms;
+        }
+
+        &-still{
+            width: 358px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+            padding-left: 2rem;
+        }
+
+        &-metadata{
+            display: flex;
+            flex-direction: column;
+            width: 344px;
+            text-align: start;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            justify-content: center;
+        }
+    }
+}
