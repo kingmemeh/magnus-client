@@ -35,12 +35,12 @@ export default function EpisodesCard({id}) {
             {episodes.slice(0,3).map((episode) => (
                 <div className='episode__card'
                 key={episode.id} >
-                    <img className='episode__card-still' src={`${baseUrl}${episode.still_path}`} alt={episode.title}/>
+                    <img className='episode__card-still' src={`${baseUrl}${episode.still_path}`} alt={`Episode${episode.episode_number}`}/>
                     <div className='episode__card-metadata'>
-                        <h4>Episode {episode.episode_number}</h4>
-                        <h3>{episode.name}</h3>
-                        <p>{truncateString(episode.overview, 80)}</p>
-                        <p><BsCalendar/>{episode.air_date}</p>
+                        <h4 className='episode__card-number'>Episode {episode.episode_number}</h4>
+                        <h3 className='episode__card-name'>{episode.name}</h3>
+                        <p className='episode__card-overview'>{truncateString(episode.overview, 80)}</p>
+                        <p className='episode__card-calendar'><BsCalendar/>{episode.air_date}</p>
                     </div>
                     
                 </div>

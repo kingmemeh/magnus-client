@@ -3,12 +3,23 @@ import React, { useState,useEffect } from 'react';
 import './TVHomeDetails.scss';
 import EpisodesCard from '../EpisodesCard/EpisodesCard';
 import {BsPlayCircle} from 'react-icons/bs';
+import Youtube from 'react-youtube';
+import movieTrailer from 'movie-trailer';
+import Player from '../TrailerModal/TrailerModal';
 
 export default function TVHomeDetails({title,fetchURL}) {
     const[tv, setTv] = useState([])
     const [selectedTV, setSelectedTV] = useState("")
+    const [trailerUrl, setTrailerUrl] = useState("")
+    const [open, setOpen] = useState(false);
     const baseUrl = 'https://image.tmdb.org/t/p/original/';
 
+    
+   const onOpenModal = () => {
+    setOpen(!open);
+    handleClick();
+  }
+     
     useEffect(() => {
         async function fetchData() {
             const request = await axios.get(fetchURL)
@@ -21,6 +32,22 @@ export default function TVHomeDetails({title,fetchURL}) {
         }
         fetchData();
     }, [])
+
+    
+
+    const handleClick = (tv) => {
+      if (trailerUrl) {
+        setTrailerUrl('');
+      } else {
+        movieTrailer(tv.title || tv?.name || "")
+        .then((url) => {
+          const urlParams = new URLSearchParams(new URL(url).search);
+          setTrailerUrl(urlParams.get('v'))
+        }).catch(error =>console.log(error))
+      }
+      console.log(trailerUrl)
+    }
+
 
   function truncateString(str, num) {
   if (str && str.length > num) {
@@ -44,6 +71,7 @@ export default function TVHomeDetails({title,fetchURL}) {
             backgroundBlendMode:"overlay",
 
         }}>
+            <Player open={open} toggleModal={onOpenModal} trailerUrl={trailerUrl}/>
             <BsPlayCircle className='home-tv__video-play--button'
             style={{color: 'yellow', fontSize:'10rem', position:'absolute', top:'50%', left:'50%'}}/>
             <div className='home-tv__video-metadata-container'>
@@ -51,9 +79,11 @@ export default function TVHomeDetails({title,fetchURL}) {
                 <p className='home-tv__video-description'>{truncateString(tv?.overview , 100)}</p>
                 <div className='home-tv__video-button-container'>
                     <button className='home-tv__video-button--1'>Play</button>
-                    <button className='home-tv__video-button--2'>Details</button>
+                    <button onClick={() => onOpenModal()} className='home-tv__video-button--2'>Watch Trailer</button>
                 </div>
             </div>
+            
+            {/* {trailerUrl && <Youtube className='home-tv__video-trailer' videoId={trailerUrl} opts={opts}/>} */}
             {/* <img className='home-tv__video'
             src={`${baseUrl}${tv?.backdrop_path}`} alt={tv.name}/> */}
         </div>

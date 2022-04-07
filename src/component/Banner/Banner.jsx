@@ -4,6 +4,7 @@ import axios from 'axios';
 import "./Banner.scss"
 import requests from "../../request";
 import BannerRow from "../BannerRow/BannerRow";
+import {BsPlayCircle} from 'react-icons/bs';
 
 const baseUrl = 'https://image.tmdb.org/t/p/original/';
 
@@ -38,12 +39,12 @@ function Banner({fetchURL}) {
                     {movie?.title || movie?.name || movie?.original_name}
                   </h1>
                   <p className="banner__description">{movie?.overview}</p>
-                  <p className="banner__metadata">Type:{movie?.media_type}</p>
-                  <p className="banner__metadata">Duration:{movie?.duration}</p>
-                  <p className="banner__metadata">Rating:{movie?.vote_average}</p>
+                  {/* <p className="banner__metadata">Type:{movie?.media_type}</p>
+                  <p className="banner__metadata">Duration:{movie?.duration}</p> */}
+                  {/* <p className="banner__metadata">Rating:{movie?.vote_average}</p> */}
               </div>
               <div>
-                  <button className="banner__button">PLAY</button>
+                  <BsPlayCircle className="banner__button"/>
               </div> 
           </div>
           

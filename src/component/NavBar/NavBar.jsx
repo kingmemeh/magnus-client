@@ -1,5 +1,6 @@
 import React from 'react'
 import { VscSearch } from "react-icons/vsc"
+import {profileAvatar} from "../../assets/images/profile.jpg"
 import "./NavBar.scss"
 
 
@@ -18,7 +19,7 @@ function NavBar() {
         <div className='navbar__user-container'>
             <VscSearch className='navbar__user-search' />
             <div className='navbar__profile-container'>
-                <img className='navbar__profile-avatar' src='https://via.placeholder.com/10x10'/>
+                <img className='navbar__profile-avatar' src={require('../../assets/images/profile.jpg')}/>
                 <p className='navbar__profile-name'>Kingsley Memeh</p>
             </div>
         </div>

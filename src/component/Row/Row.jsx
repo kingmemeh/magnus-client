@@ -61,7 +61,11 @@ function Row ({title, fetchURL}) {
                     <p className="row__link"> View More</p>
                 </div>
                 <div className="row__posters" >
-                <div div className="row__poster-card-backdrop" ><img className="row__poster-backdrop" src={`${baseUrl}${largeMovie.backdrop_path}`} alt={largeMovie.title}  /></div>
+                <div div className="row__poster-card-backdrop" 
+                onClick={() => {openModal(largeMovie.id)}}>
+                    <img className="row__poster-backdrop" src={`${baseUrl}${largeMovie.backdrop_path}`} alt={largeMovie.title}  />
+                    <p className="row__poster-backdrop-title">{largeMovie.title}</p>
+                </div>
                    {movies.slice(1,5).map((movie, first) => (
                       <div className="row__poster-card"
                       onClick={() => {openModal(movie.id)}}
@@ -69,6 +73,7 @@ function Row ({title, fetchURL}) {
                       
                       <img className="row__poster" 
                       src={`${baseUrl}${movie.poster_path}`} alt={movie.title}/>
+                      <p className="row__poster-title">{movie.title}</p>
                       </div>
                       
                    ))}

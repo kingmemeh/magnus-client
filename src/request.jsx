@@ -3,7 +3,8 @@ const apiUrl = 'https://api.themoviedb.org/3'
 
 const requests = {
     fetchTrending:`${apiUrl}/trending/all/day?api_key=${apiKey}`,
-    fetchTrendingTV:`${apiUrl}/trending/tv/day?api_key=${apiKey}`,
+    fetchTrendingMovies:`${apiUrl}/trending/movie/day?api_key=${apiKey}`,
+    fetchTrendingTV:`${apiUrl}/tv/popular?api_key=${apiKey}`,
     //fetchSimilar: `${apiUrl}/movie/${movie_id}/similar?api_key=${apiKey}&language=en-US&page=1`,
     findTopRated: `${apiUrl}/movie/top_rated?api_key=${apiKey}&language=en-US`,
     fecthAnimatedMovies: `${apiUrl}/discover/movie?api_key=${apiKey}&&with_genres=16`,
@@ -12,6 +13,7 @@ const requests = {
     fetchActionMovies: `${apiUrl}/discover/movie?api_key=${apiKey}&&with_genres=28`,
     fetchCrimeMovies: `${apiUrl}/discover/movie?api_key=${apiKey}&&with_genres=12`,
     fetchHistoryMovies: `${apiUrl}/discover/movie?api_key=${apiKey}&&with_genres=36`,
+    
 }
 
 export default requests;
