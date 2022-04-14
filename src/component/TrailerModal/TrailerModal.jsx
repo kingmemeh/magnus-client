@@ -18,21 +18,6 @@ const opts ={
     <Modal className='modal__container'
         open={open}
         onClose={toggleModal}
-        // styles={{
-        //   modal: {
-        //     maxWidth: "unset",
-        //     width: "100%",
-        //     padding: "unset",
-        //     position:'absolute'
-        //   },
-        //   overlay: {
-        //     background: "rgba(0, 0, 0, 0.5)"
-        //   },
-        //   closeButton: {
-        //     background: "yellow"
-        //   }
-        // }}
-        // center
         >
          <YouTube className='modal__wrapper'
           videoId={trailerUrl}

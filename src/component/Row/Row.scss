@@ -28,8 +28,6 @@
         padding: 1.25rem;
         flex-wrap: wrap;
         align-items: center;
-        //justify-content: space-around;
-        // flex-wrap: wrap;
         width: 1280px;
         height:1256px;
         &::-webkit-scrollbar {
@@ -42,9 +40,7 @@
         height: 560px;
         padding: .5rem;
         position: relative;
-        // background: linear-gradient(-45deg,
-        // rgba(0,0,0, .7),
-        // rgba(95, 195, 228, .7));
+
         &-backdrop {
             width: 817px;
             height: 560px;
@@ -84,7 +80,6 @@
         object-fit: cover;
         width: 400px;
         height: 560px;
-        //max-height: 45.25rem;
         margin-right: 3.2rem;
         border-radius: 10px;
         transition: transform 450ms;
@@ -113,7 +108,6 @@
         object-position: center;
         width: 817px;
         height: 560px;
-        //max-height: 45.25rem;
         margin-right: 1.2rem;
         border-radius: 10px;
         transition: transform 450ms;

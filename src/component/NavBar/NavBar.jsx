@@ -19,7 +19,7 @@ function NavBar() {
         <div className='navbar__user-container'>
             <VscSearch className='navbar__user-search' />
             <div className='navbar__profile-container'>
-                <img className='navbar__profile-avatar' src={require('../../assets/images/profile.jpg')}/>
+                <img className='navbar__profile-avatar' src={require('../../assets/images/profile.jpg')} alt={"user avatar"}/>
                 <p className='navbar__profile-name'>Kingsley Memeh</p>
             </div>
         </div>

@@ -11,6 +11,7 @@ const baseUrl = 'https://image.tmdb.org/t/p/original/';
 function Banner({fetchURL}) {
     const [movie, setMovie, currentVideo, setcurrentVideo] = useState([])
 
+    //We will refactor state of component to use currentVideo to set state onClick of a BannerRow element
     useEffect(() => {
         async function fetchData() {
         const request = await axios.get(fetchURL);
@@ -18,7 +19,6 @@ function Banner({fetchURL}) {
             request.data.results[
             Math.floor(Math.random() * request.data.results.length - 1)
         ]);
-        // setcurrentVideo(movie.id)
         return request;
         }
         fetchData();
@@ -39,9 +39,6 @@ function Banner({fetchURL}) {
                     {movie?.title || movie?.name || movie?.original_name}
                   </h1>
                   <p className="banner__description">{movie?.overview}</p>
-                  {/* <p className="banner__metadata">Type:{movie?.media_type}</p>
-                  <p className="banner__metadata">Duration:{movie?.duration}</p> */}
-                  {/* <p className="banner__metadata">Rating:{movie?.vote_average}</p> */}
               </div>
               <div>
                   <BsPlayCircle className="banner__button"/>
@@ -50,7 +47,7 @@ function Banner({fetchURL}) {
           
           <BannerRow title="Trending" fetchURL={requests.fetchTrending}/>
    
-          {/* <Sidebar movie={movie} currentVideo={currentVideo}/> */}
+         
       </header>
       </>
     )

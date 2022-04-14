@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+WD Diploma - Capstone Project
+Project Title:	Magnus 
+Author:		Kingsley Memeh
+Cohort: 		Winter 2022
+ 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Overview
 
-## Available Scripts
+1.1 Description
+Magnus is a prototype on-demand streaming platform. For this version, the platform will use The Movie Database to populate the app with movie/tv information. Ultimately the platform will be THE place to consume African film and television. 
 
-In the project directory, you can run:
+1.2 Problem.
+While there is no inherent problem with the current streaming space. I felt that there was no platform indigenous to the African film industry that was catered towards promoting the aura of African content. 
 
-### `npm start`
+1.3 User Profile
+The user will be any one interested in on-demand streaming, most importantly African film and television. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1.4 Requirements: Use Cases and Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Magnus should effectively do the following in version 1:
+1.	Allow users the ability to view and interact with a curating list of films and television
 
-### `npm test`
+1.5 Tech Stack and APIs
+Version 1:
+•	React 
+•	SAAS
+•	AXIOS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+      Version 2:
+•	All technology utilized above
+•	Node.js
+•	Passport.js
+•	MongoDB 
+•	Firebase
 
-### `npm run build`
+2. Client-Side Implementation
+Site Map
+magnus/src/assets/images/magnus_map.jpg
+ 
+Screen Details
+magnus/src/assets/images/magnus1.png
+magnus/src/assets/images/magnus2.png
+magnus/src/assets/images/magnus3.png
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Server-Side Implementation
+3.1 End-Point Descriptions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+End-point	Response Format
+HTTP GET - /movie/<movie.id>/reviews	{ reviews : [ { author : ‘STRING’, content : ‘STRING’, ID : NUMBER, date_created: ‘STRING’ } … ] }
+HTTP GET - /movie/<movie.id>        { results : [ { title : ‘STRING’, description : ‘STRING’, ID : NUMBER, date_added: ‘STRING’, year: ‘STRING’ , cast;[{name: STRING, character: STRING, profile_image: STRING}]} … ] }
+	
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3.2 External APIs that will be consumed 
+•	TMDB
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
